@@ -62,13 +62,13 @@ Run all installation and start commands from this project root — the directory
 
 ## 1. Download and extract the project
 
-Download `omlx-voice-bridge-0.3.0.zip` and leave it in your Downloads folder.
+Download `omlx-ask-ai-extension.zip` and leave it in your Downloads folder.
 
 Open Terminal and extract it into `~/Applications`:
 
 ```bash
 mkdir -p ~/Applications
-unzip -q ~/Downloads/omlx-voice-bridge-0.3.0.zip -d ~/Applications
+unzip -q ~/Downloads/omlx-ask-ai-extension.zip -d ~/Applications
 ```
 
 Then enter the project directory:
@@ -255,8 +255,8 @@ A successful response looks similar to:
 ```json
 {
   "status": "ok",
-  "bridge": "omlx-voice-bridge",
-  "bridge_version": "0.3.0",
+  ...
+  ...
   "upstream": "http://127.0.0.1:8000",
   "reasoning_model": "configured-reasoning-model",
   "speech_model": "configured-speech-model"
