@@ -1,0 +1,32 @@
+server:
+  host: 127.0.0.1
+  port: 8010
+  api_key: ""                 # Optional bridge key; leave blank for loopback-only use.
+
+omlx:
+  base_url: http://127.0.0.1:8000
+  api_key: ""                 # Set if oMLX API authentication is enabled.
+  timeout_seconds: 300
+
+models:
+  reasoning: mlx-community--Qwen3.6-35B-A3B-6bit
+  speech: LiquidAI--LFM3-Omni-2B-MLX-8bit
+
+vision:
+  # Qwen3.6 is vision-capable; this enables Ask AI's screen-share button.
+  enabled: true
+  max_images_per_turn: 4
+  max_image_bytes: 8388608     # 8 MiB per image
+
+audio:
+  # Ask AI realtime audio is PCM16 at 24 kHz. oMLX LFM3 handles its own
+  # model-specific audio path; do not change these unless you verify the app contract.
+  client_sample_rate: 24000
+  max_input_seconds: 90
+  output_mime_type: audio/pcm
+
+conversation:
+  max_history_turns: 20
+  system_prompt: >
+    You are a concise, capable voice assistant. Answer naturally for spoken
+    conversation. Avoid markdown tables and excessive formatting unless asked.
